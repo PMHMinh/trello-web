@@ -1,12 +1,11 @@
-import Button from '@mui/material/Button'
-import AcUnitRoundedIcon from '@mui/icons-material/AcUnitRounded'
+import Board from './pages/Boards/_id'
+
 function App() {
   return (
     <>
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-      <AcUnitRoundedIcon></AcUnitRoundedIcon>
+      {/* React router DOM /board /board/{board-id} */}
+      {/* Board Details  */}
+      <Board />
     </>
   )
 }
