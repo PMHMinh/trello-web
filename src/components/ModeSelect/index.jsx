@@ -10,6 +10,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode'
 
 function ModeSelect() {
   const { mode, setMode } = useColorScheme()
+
   const handleChange = (event) => {
     const selectedMode = event.target.value
     setMode(selectedMode)
@@ -18,8 +19,15 @@ function ModeSelect() {
   }
 
   return (
-    <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-      <InputLabel id="label-select-dark-light-mode">Mode</InputLabel>
+    <FormControl sx={{ minWidth: '120px' }} size="small">
+      <InputLabel
+        id="label-select-dark-light-mode"
+        sx={{
+          color: 'white', // Chữ màu trắng
+          '&.Mui-focused': { color: 'white' } //Bấm vào Input ,Mode vẫn màu trắng
+        }}>
+        Mode
+      </InputLabel>
       <Select
         labelId="label-select-dark-light-mode"
         id="select-dark-light-mode"
@@ -27,6 +35,18 @@ function ModeSelect() {
         // mode là sẽ ăn theo giá trị Dark hoặc Light khi bấm
         label="Mode"
         onChange={handleChange}
+        sx={{
+          color: 'white',
+          '.MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
+          //Tùy chỉnh viền của InputLabel
+          '&:hover .MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
+          //Tùy chỉnh khi hover của InputLabel
+          '&.Mui-focused .MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
+          //Tùy chỉnh khi bấm vào InputLabel
+          '.MuiSvgIcon-root': { color: 'white' }
+          //Tùy chỉnh màu Light - Dark của Icon
+
+        }}
       >
         <MenuItem value="light">
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>

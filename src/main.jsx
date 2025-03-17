@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App from '~/App.jsx'
 // import MUI vào sử dụng
 import CssBaseline from '@mui/material/CssBaseline'
 import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/styles'
-import theme from './theme'
+import theme from '~/theme'
 // CssBaseline nhất quán Css giữa các trình duyệt
 // ThemeProvider bọc bên ngoài (ứng dụng App) để CSS
 

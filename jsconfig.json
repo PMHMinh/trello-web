@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+    },
+  }
+}
+// Tại sao cần jsconfig.json?
+// 🛠 Hỗ trợ IntelliSense: VS Code hiểu được alias, gợi ý code chính xác hơn.
+// 🚀 Dễ bảo trì: Khi di chuyển file, không cần sửa nhiều đường dẫn.
+// ⚡ Tích hợp tốt với Vite/Webpack khi dùng alias
